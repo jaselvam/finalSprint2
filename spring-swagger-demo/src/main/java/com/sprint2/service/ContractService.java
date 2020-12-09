@@ -16,7 +16,7 @@ import com.sprint2.utility.ValidateContract;
 
 
 @Service
-public class ContractService {
+public class ContractService implements IContractService{
 	@Autowired
 	private ContractRepository contractRepository;
 	

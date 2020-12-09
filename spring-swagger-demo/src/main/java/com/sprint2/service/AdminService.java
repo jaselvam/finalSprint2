@@ -14,7 +14,7 @@ import com.sprint2.utility.ValidateAdmin;
 
 
 @Service               //@Service annotation is used to mark the class as a service provider
-public class AdminService{    //AdminService should implement all the methods present in IAdminService interface
+public class AdminService implements IAdminService{    //AdminService should implement all the methods present in IAdminService interface
 	@Autowired    // To establish a relationship with Admin repository
 	private AdminRepository adminRepository;
 	

@@ -26,7 +26,7 @@ import com.sprint2.service.AdminService;
 @CrossOrigin(origins = "http://localhost:3000")
 @Controller
 @RequestMapping("/fms/m1/")              //Maps a specific request path or pattern onto a controller
-public class AdminController{
+public class AdminController implements IAdminController{
 	Logger logger = LoggerFactory.getLogger(AdminController.class);
 	@Autowired                   // To establish relationship with admin service
 	private AdminService adminService;

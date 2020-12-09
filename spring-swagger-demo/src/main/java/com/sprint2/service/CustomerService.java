@@ -15,7 +15,7 @@ import com.sprint2.utility.Validations;
 
 
 @Service
-public class CustomerService  {
+public class CustomerService implements ICustomerService {
 
 	@Autowired
 	private CustomerRepository customerRepository;

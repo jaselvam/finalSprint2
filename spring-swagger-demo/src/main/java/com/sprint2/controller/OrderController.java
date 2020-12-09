@@ -31,7 +31,7 @@ import com.sprint2.service.*;
 @CrossOrigin(origins = "http://localhost:3000")
 @Controller
 @RequestMapping("/fms/m5")
-public class OrderController {
+public class OrderController implements IOrderController{
 	
 	@Autowired
 	private OrderService orderservice;

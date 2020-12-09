@@ -28,14 +28,6 @@ class ProductTest {
 	ProductController productController;
 
 	@Test
-	public void update()throws InvalidOperation
-	{
-		Product product=new Product("wood","5","wood is used for construction");
-		Mockito.when(productController.updateProduct( product)).thenReturn(product);
-		assertEquals(product,productController.updateProduct(product));
-
-	}
-	@Test
     public void getall() {
         List<Product> product=new ArrayList<Product>();
         Mockito.when(productController.getAllProduct()).thenReturn(product);
@@ -53,17 +45,25 @@ class ProductTest {
     public void get() {
 		Product product=new Product();
 
-        Mockito.when(productController.getProductByproductId(26)).thenReturn(product);
-        assertEquals(product,productController.getProductByproductId(26));
+        Mockito.when(productController.getProductById(26));
+        assertEquals(product,productController.getProductById(26));
 
     }
 	@Test
 	 public void testdelete() {
 		 Boolean str1=true;
 		
-		 Mockito.when(productController.deleteProductbyproductId(26)).thenReturn(str1);
-		    assertEquals(str1,productController.deleteProductbyproductId(26));
+		 Mockito.when(productController.deleteProduct(26)).thenReturn(str1);
+		    assertEquals(str1,productController.deleteProduct(26));
 	 }
+	@Test
+	public void update()throws InvalidOperation
+	{
+		Product product=new Product("wood","5","wood is used for construction");
+		Mockito.when(productController.updateProduct(product.getProductId(), product));
+		assertEquals(product,productController.updateProduct(product.getProductId(),product));
+
+	}
 
 
 }

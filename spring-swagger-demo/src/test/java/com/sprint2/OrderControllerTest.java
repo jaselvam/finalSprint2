@@ -29,42 +29,41 @@ class OrderControllerTest {
 	OrderController orderController;
 
 	@Test
-	public void update()throws InvalidOperation
-	{
-		Order order=new Order("eeg","5","ddgg");
-		Mockito.when(orderController.updateOrder(order)).thenReturn(order);
-		assertEquals(order,orderController.updateOrder(order));
-
-	}
-	@Test
     public void getall() {
         List<Order> order=new ArrayList<Order>();
-        Mockito.when(orderController.getAllOrder()).thenReturn(order);
-        assertEquals(order,orderController.getAllOrder());
+        Mockito.when(orderController.getAllOrders()).thenReturn(order);
+        assertEquals(order,orderController.getAllOrders());
 
     }
 	@Test
 	public void addOrder() 
 	{
 		Order p1=new Order("dfgh","5","sfdghyujy");
-		Mockito.when(orderController.addOrder(p1)).thenReturn(p1);
+		Mockito.when(orderController.addOrder(p1));
 	    assertEquals(p1,orderController.addOrder(p1));
 	}
 	@Test
     public void get() {
 		Order order=new Order();
 		
-        Mockito.when(orderController.getOrderByorderNumber(26)).thenReturn(order);
-        assertEquals(order,orderController.getOrderByorderNumber(26));
+        Mockito.when(orderController.getOrderById(26));
+        assertEquals(order,orderController.getOrderById(26));
 
     }
 	@Test
-			public void testdelete() {
+	public void testdelete() {
 		 	boolean str1=true;;
 		 	int id=29;
-		 	Mockito.when(orderController.deleteOrderbyorderNumber(id)).thenReturn(str1);
-		 	assertEquals(str1,orderController.deleteOrderbyorderNumber(id));
+		 	Mockito.when(orderController.removeOrder(id));
+		 	assertEquals(str1,orderController.removeOrder(id));
 	}
+	@Test
+	public void update()throws InvalidOperation
+	{
+		Order order=new Order("eeg","5","ddgg");
+		Mockito.when(orderController.updateOrder(order));
+		assertEquals(order,orderController.updateOrder(order));
 
+	}
 
 }

@@ -22,7 +22,7 @@ import com.sprint2.service.UserService;
 
 @Controller
 @RequestMapping("/fms/m2")        //Maps a specific request path or pattern onto a controller
-public class UserController {
+public class UserController implements IUserController{
 	Logger logger = LoggerFactory.getLogger(UserController.class);
 	@Autowired       // To establish relationship with user service
 	private UserService userService;

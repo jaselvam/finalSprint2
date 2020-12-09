@@ -27,7 +27,7 @@ import com.sprint2.service.CustomerService;
 @CrossOrigin(origins = "http://localhost:3000")
 @Controller
 @RequestMapping("/fms/m3")
-public class CustomerController {
+public class CustomerController implements ICustomerController{
 	@Autowired
 	private CustomerService customerService;
 

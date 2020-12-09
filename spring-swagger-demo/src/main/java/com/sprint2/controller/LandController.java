@@ -23,7 +23,7 @@ import com.sprint2.model.Land;
 //connect from postman as http://localhost:8080/swagger-ui.html
 @Controller
 @RequestMapping("/Land")
-public class LandController {
+public class LandController implements ILandController{
 	Logger logger=LoggerFactory.getLogger(LandController.class);
 	
 	//autowire the LandService class

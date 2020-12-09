@@ -27,7 +27,7 @@ import com.sprint2.service.SchedulerService;
 @CrossOrigin(origins = "http://localhost:3000")
 @Controller
 @RequestMapping("/fms/m6")
-public class SchedulerController
+public class SchedulerController implements ISchedulerController
 {
 	Logger logger=LoggerFactory.getLogger(SchedulerController.class);
 	//Autowire the SchedulerService class 

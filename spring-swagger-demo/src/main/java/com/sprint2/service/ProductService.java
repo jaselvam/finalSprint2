@@ -14,7 +14,7 @@ import com.sprint2.repository.ProductRepository;
 
 
 @Service
-public class ProductService {
+public class ProductService implements IProductService{
 	@Autowired ProductRepository productRepository;
 	
 	public Product getProductById(Integer productId)

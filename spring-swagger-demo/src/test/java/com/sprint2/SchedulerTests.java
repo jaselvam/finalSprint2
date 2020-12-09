@@ -31,8 +31,8 @@ public class SchedulerTests
 	public void testupdateScheduler()
 	{
 		Scheduler scheduler=new Scheduler(16,"janani","9784512634","1003");
-		Mockito.when(schedulerController.updateScheduler(scheduler)).thenReturn(scheduler);
-		assertEquals(scheduler,schedulerController.updateScheduler(scheduler));
+		Mockito.when(schedulerController.updateScheduler(scheduler.getSchedulerId(),scheduler)).thenReturn(scheduler);
+		assertEquals(scheduler,schedulerController.updateScheduler(scheduler.getSchedulerId(),scheduler));
 
 	}
 	@Test

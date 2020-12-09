@@ -11,7 +11,10 @@ import com.sprint2.repository.UserRepository;
 
 
 @Service    //@Service annotation is used to mark the class as a service provider
-public class UserService {
+public class UserService implements IUserService
+
+{
+
 	@Autowired     // To establish relationship between UserRepository and UserService
 	private UserRepository userrepository;
 	

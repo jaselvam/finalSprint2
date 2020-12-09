@@ -9,7 +9,7 @@ import com.sprint2.model.Order;
 import com.sprint2.repository.OrderRepository;
 
 @Service
-public class OrderService {
+public class OrderService implements IOrderService{
 	@Autowired
 	private OrderRepository orderRepo;
 	public List<Order> getAllOrders() {

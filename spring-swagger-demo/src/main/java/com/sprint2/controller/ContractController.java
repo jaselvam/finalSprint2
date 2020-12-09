@@ -22,7 +22,7 @@ import com.sprint2.service.*;
 //connect from postman as http://localhost:8082/swagger-ui.html
 @Controller
 @RequestMapping("/Contract")
-public class ContractController{
+public class ContractController implements IContractController{
 	Logger logger=LoggerFactory.getLogger(ContractController.class);
 	
 	//autowire the ContractService class 

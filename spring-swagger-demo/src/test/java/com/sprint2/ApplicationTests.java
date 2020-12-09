@@ -49,8 +49,8 @@ class ApplicationTests {
 	@Test
 	void testupdateAdmin() {
 		 Admin admin=new Admin("Hamsi","Hamsi852");
-		 Mockito.when(adminController.updateAdmin(admin)).thenReturn(admin);
-	     assertEquals(admin,adminController.updateAdmin(admin));
+		 Mockito.when(adminController.updateAdmin(admin.getId(),admin));
+	     assertEquals(admin,adminController.updateAdmin(admin.getId(),admin));
 		 
 	}
 	@Test

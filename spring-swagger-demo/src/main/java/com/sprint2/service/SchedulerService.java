@@ -15,7 +15,7 @@ import com.sprint2.utility.SchedulerValidations;
 
 //defining the logic for Scheduler
 @Service
-public class SchedulerService {
+public class SchedulerService implements ISchedulerService{
 
 	//Autowire the SchedulerRepository interface
 	@Autowired

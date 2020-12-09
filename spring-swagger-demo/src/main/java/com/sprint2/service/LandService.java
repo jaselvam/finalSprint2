@@ -12,7 +12,7 @@ import com.sprint2.model.Land;
 
 //defining the business logic
 @Service
-public class LandService {
+public class LandService implements ILandService{
 	@Autowired
 	private com.sprint2.repository.LandRepository LandRepository;
 	
